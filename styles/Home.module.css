@@ -1,0 +1,64 @@
+
+
+.skewxshake{
+  animation: skew-x-shake 1.3s infinite;
+}
+
+
+
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  
+.connect_button {
+  justify-content: flex-end;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  
+  
+}
+
+
+@media (max-width: 402px) {
+ 
+ 
+ 
+
+ 
+}
+@media (max-width: 600px) {
+ 
+  
+}
+@media (max-width: 901px) {
+ 
+}
+
+@media (min-width: 1000px){
+  
+}
+
+@media (max-width: 1000px) {
+  
+}
+
+
+
