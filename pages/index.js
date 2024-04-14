@@ -11,6 +11,8 @@ import Link from "next/link";
 import ReactDOM from 'react-dom'
 import Router from "next/router";
 import axios from 'axios';
+import WalletConnectClient from '@walletconnect/client';
+import QRCodeModal from '@walletconnect/qrcode-modal';
 
 
 
@@ -28,11 +30,12 @@ export default function Home() {
   });
 
   const [hasMetamask, setHasMetamask] = useState(false);
-  
+  const [walletConnector, setWalletConnector] = useState(null);
   const [userAccounts, setUserAccounts] = useState([]);
   
   const [chainID, setChainID] = useState('');
-  
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+
   
 
   const Web3 = require('web3');
@@ -146,7 +149,7 @@ const gasPrice = eth.getGasPrice()
           <button className={styles.connect_button} id="connectbutton" onClick={() => connect()} style={{ transition: 'all 300ms'}}>CONNECT</button>
         )
       ) : (
-        <button className={styles.button} id="connectbutton" onClick={() => window.location.href='https://metamask.io/download/'}>ADD METAMASK</button>
+       ""
       )}
       {active ? <><button id="connectbutton" className={styles.connect_button} onClick={() => disconnect()}>DISCONNECT</button>
       </>: ""} 
