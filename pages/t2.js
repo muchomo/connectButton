@@ -81,8 +81,7 @@ export default function Home() {
           <button className={styles.connect_button} id="connectbutton" onClick={connectWallet}>Connect Wallet</button>
         )
       ) : (
-        <button onClick={() => window.location.href = 'https://metamask.io/download/'}>Add MetaMask</button>
-      )}
+''      )}
 
     </div>
   );
